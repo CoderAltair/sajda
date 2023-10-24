@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sajda/screens/pages/qiblah/qiblah_compass.dart';
 import 'package:sajda/screens/pages/saved_sura.dart';
 import 'package:sajda/screens/pages/tasbeh.dart';
-
-import 'package:sajda/screens/qibla.dart';
-import '../app/constants/globals.dart';
+import '../app/globals.dart';
 import 'pages/home_screen.dart';
 import 'pages/tahorat_oliw.dart';
 
@@ -18,7 +17,8 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    QiblahScreen(),
+    QiblahCompass(),
+    // QiblahScreen(),
     Ablution(),
     TasbehScreen(),
     SavedSura(),

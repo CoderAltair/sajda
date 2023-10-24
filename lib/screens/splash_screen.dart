@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sajda/screens/spashing.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../app/constants/globals.dart';
+import '../app/globals.dart';
 import 'global_home.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width * 0.9,
             height: MediaQuery.of(context).size.height * 0.5,
             child: Center(

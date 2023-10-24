@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
+import 'package:sajda/app/globals.dart';
 import 'package:sajda/bloc_state_manegment/disableSura/disable_sura_bloc.dart';
 import 'package:sajda/models/ayat.dart';
 import 'package:sajda/models/isar_sura/user.dart';

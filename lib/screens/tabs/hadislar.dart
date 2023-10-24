@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
+import 'package:sajda/app/globals.dart';
 
 class HadislarScreen extends StatelessWidget {
   const HadislarScreen({super.key});
@@ -14,8 +13,7 @@ class HadislarScreen extends StatelessWidget {
           Stack(
             alignment: Alignment.center,
             children: [
-              Container(
-                  // height: 70,
+              SizedBox(
                   child: Image.asset(
                 'assets/images/room.png',
                 scale: 3.4,
@@ -521,38 +519,11 @@ class HadislarScreen extends StatelessWidget {
     );
   }
 
-  AppBar _appBar(BuildContext context) => AppBar(
-        // backgroundColor: background,
-        automaticallyImplyLeading: false,
-        elevation: 0,
-        title: Row(children: [
-          IconButton(
-              onPressed: (() => {}),
-              icon: SvgPicture.asset('assets/svgs/menu-icon.svg')),
-          const SizedBox(
-            width: 24,
-          ),
-          Text(
-            'Muhammad (s.a.v.)',
-            style: GoogleFonts.poppins(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Theme.of(context).brightness == Brightness.light
-                  ? Colors.black
-                  : Colors.white,
-            ),
-          ),
-          const Spacer(),
-          IconButton(
-              onPressed: (() => {}),
-              icon: SvgPicture.asset('assets/svgs/search-icon.svg')),
-        ]),
-      );
   Widget rasm(String num, BuildContext context) {
     return Center(
       child: Stack(
         children: [
-          Container(
+          SizedBox(
             child: Image.asset(
               'assets/images/circle.png',
               color: primary,
@@ -560,7 +531,7 @@ class HadislarScreen extends StatelessWidget {
               height: 40,
             ),
           ),
-          Container(
+          SizedBox(
             width: 40,
             height: 40,
             child: Center(

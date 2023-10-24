@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
+import 'package:sajda/app/globals.dart';
 
 class Ablution extends StatefulWidget {
   const Ablution({super.key});
@@ -125,7 +125,7 @@ class _AblutionState extends State<Ablution> {
               ),
               index2 == null
                   ? const Text("")
-                  : Container(
+                  : SizedBox(
                       height: MediaQuery.of(context).size.height * 0.1,
                       width: MediaQuery.of(context).size.height * 0.1,
                       child: Padding(
@@ -137,7 +137,7 @@ class _AblutionState extends State<Ablution> {
           ),
           Column(
             children: [
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.height * 0.7,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),

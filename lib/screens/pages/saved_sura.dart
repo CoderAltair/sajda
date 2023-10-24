@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
+import 'package:sajda/app/globals.dart';
 import 'package:sajda/bloc_state_manegment/savedSuraBloc/get_sura_name_with_isar_bloc.dart';
 
 class SavedSura extends StatefulWidget {
@@ -49,7 +49,7 @@ class _SavedSuraState extends State<SavedSura> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Container(
+                            SizedBox(
                               height: 30,
                               width: MediaQuery.of(context).size.width * 1,
                               child: Image.asset(

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'app/constants/globals.dart';
+import 'app/globals.dart';
 import 'bloc_state_manegment/disableSura/disable_sura_bloc.dart';
 import 'bloc_state_manegment/namoz_vaqtlari/namoz_vaqtlari_bloc.dart';
 import 'bloc_state_manegment/savedSuraBloc/get_sura_name_with_isar_bloc.dart';
 import 'bloc_state_manegment/theme_bloc/theme_mode_bloc.dart';
 import 'screens/splash_screen.dart';
-import 'services/iser_service/isar_service.dart';
+import 'services/isar_service.dart';
 
 void main() {
   runApp(const MyApp());

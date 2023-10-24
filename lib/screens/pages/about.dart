@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
+import 'package:sajda/app/globals.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});

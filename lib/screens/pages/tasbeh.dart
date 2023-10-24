@@ -121,7 +121,7 @@ class _TasbehScreenState extends State<TasbehScreen> {
                           cc += 1 / 16;
                         });
                       },
-                      child: Container(
+                      child: SizedBox(
                         height: 150,
                         width: 150,
                         child: Stack(
@@ -199,7 +199,7 @@ class _TasbehScreenState extends State<TasbehScreen> {
               ? const Color.fromARGB(255, 180, 194, 236)
               : const Color.fromARGB(255, 13, 30, 83),
           contentPadding: const EdgeInsets.all(8),
-          content: Container(
+          content: SizedBox(
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -311,7 +311,7 @@ class _TasbehScreenState extends State<TasbehScreen> {
               ),
             ),
           ),
-          actions: [],
+          actions:const [],
         );
       },
     );

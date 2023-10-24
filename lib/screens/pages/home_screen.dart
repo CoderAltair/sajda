@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
+import 'package:sajda/app/globals.dart';
 import 'package:sajda/bloc_state_manegment/namoz_vaqtlari/namoz_vaqtlari_bloc.dart';
 import 'package:sajda/bloc_state_manegment/theme_bloc/theme_mode_bloc.dart';
 import 'package:sajda/screens/pages/about.dart';
@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            Spacer(),
+           const Spacer(),
             Image.asset(
               "assets/images/liner.png",
               color: const Color.fromARGB(255, 64, 114, 251),
@@ -233,7 +233,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             fontWeight: FontWeight.w600,
                                           ),
                                         ),
-                                        Icon(Icons.location_on),
+                                       const Icon(Icons.location_on),
                                         TextButton(
                                           onPressed: () {
                                             showAlertDialog(context);
@@ -442,74 +442,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  _lastRead() {
-    return Stack(
-      children: [
-        Container(
-          height: 131,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              gradient: const LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: [
-                    0,
-                    .6,
-                    1
-                  ],
-                  colors: [
-                    Color(0xFFDF98FA),
-                    Color(0xFFB070FD),
-                    Color(0xFF9055FF)
-                  ])),
-        ),
-        Positioned(
-            bottom: 0,
-            right: 0,
-            child: SvgPicture.asset('assets/svgs/quran.svg')),
-        Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  SvgPicture.asset('assets/svgs/book.svg'),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    'Oxirgi o`qilgan sura',
-                    style: GoogleFonts.poppins(
-                        color: Colors.white, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Text(
-                "Fotiha surasi",
-                style: GoogleFonts.poppins(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 18),
-              ),
-              const SizedBox(
-                height: 4,
-              ),
-              Text(
-                "Oyat 3",
-                style: GoogleFonts.poppins(
-                  color: Colors.white,
-                ),
-              )
-            ],
-          ),
-        )
-      ],
-    );
-  }
+
 
   showAlertDialog(BuildContext context) {
     showDialog(
@@ -521,7 +454,7 @@ class _HomeScreenState extends State<HomeScreen> {
               : const Color.fromARGB(255, 13, 30, 83),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
-          content: Container(
+          content: SizedBox(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -641,7 +574,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          actions: [],
+          actions: const [],
         );
       },
     );

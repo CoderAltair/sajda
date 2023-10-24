@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../app/constants/globals.dart';
+import '../app/globals.dart';
 import 'global_home.dart';
 
 class Splashing extends StatefulWidget {
@@ -80,6 +80,7 @@ class _SplashingState extends State<Splashing> {
                               SharedPreferences pr =
                                   await SharedPreferences.getInstance();
                               pr.setBool('splaw', true);
+                              // ignore: use_build_context_synchronously
                               Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => const Home(),
                               ));
