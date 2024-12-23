@@ -1,8 +1,8 @@
+import 'package:Sajda/screens/pages/saved_sura.dart';
+import 'package:Sajda/screens/pages/tasbeh.dart';
+import 'package:Sajda/screens/qibla.dart';
 import 'package:flutter/material.dart';
-import 'package:sajda/screens/pages/saved_sura.dart';
-import 'package:sajda/screens/pages/tasbeh.dart';
 
-import 'package:sajda/screens/qibla.dart';
 import '../app/constants/globals.dart';
 import 'pages/home_screen.dart';
 import 'pages/tahorat_oliw.dart';

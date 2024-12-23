@@ -1,6 +1,7 @@
 import 'dart:async';
+import 'package:Sajda/screens/spashing.dart';
 import 'package:flutter/material.dart';
-import 'package:sajda/screens/spashing.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import '../app/constants/globals.dart';
 import 'global_home.dart';

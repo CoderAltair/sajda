@@ -1,6 +1,6 @@
+import 'package:Sajda/models/isar_sura/user.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:sajda/models/isar_sura/user.dart';
 
 class IsarService {
   late final Future<Isar> db;

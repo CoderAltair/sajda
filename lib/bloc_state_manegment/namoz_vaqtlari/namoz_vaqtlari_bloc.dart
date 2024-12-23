@@ -1,6 +1,6 @@
+import 'package:Sajda/models/namoz_time_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:sajda/models/namoz_time_model.dart';
 part 'namoz_vaqtlari_event.dart';
 part 'namoz_vaqtlari_state.dart';
 

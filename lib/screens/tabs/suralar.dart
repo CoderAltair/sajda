@@ -1,12 +1,12 @@
+import 'package:Sajda/app/constants/globals.dart';
+import 'package:Sajda/bloc_state_manegment/disableSura/disable_sura_bloc.dart';
+import 'package:Sajda/models/surah.dart';
+import 'package:Sajda/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
-import 'package:sajda/bloc_state_manegment/disableSura/disable_sura_bloc.dart';
-import 'package:sajda/models/surah.dart';
-import 'package:sajda/screens/detail_screen.dart';
 
 class SurahTab extends StatelessWidget {
   const SurahTab({super.key});

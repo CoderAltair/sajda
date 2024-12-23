@@ -1,6 +1,6 @@
+import 'package:Sajda/app/constants/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
 
 class CommentsPage extends StatelessWidget {
   const CommentsPage({super.key});
@@ -57,17 +57,17 @@ class CommentsPage extends StatelessWidget {
                 Text(
                   'Email: kamronqodirov441@gmail.com',
                   textAlign: TextAlign.end,
-                  style:GoogleFonts.poppins(
+                  style: GoogleFonts.poppins(
                       color: Theme.of(context).brightness == Brightness.light
                           ? Colors.black
                           : Colors.white,
                       fontSize: 17,
                       fontWeight: FontWeight.w500),
                 ),
-                  Text(
+                Text(
                   'Email: tiininvan@gmail.com',
                   textAlign: TextAlign.end,
-                  style:GoogleFonts.poppins(
+                  style: GoogleFonts.poppins(
                       color: Theme.of(context).brightness == Brightness.light
                           ? Colors.black
                           : Colors.white,

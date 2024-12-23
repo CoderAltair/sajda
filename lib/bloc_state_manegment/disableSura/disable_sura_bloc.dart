@@ -1,6 +1,6 @@
+import 'package:Sajda/models/isar_sura/user.dart';
+import 'package:Sajda/services/iser_service/isar_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sajda/models/isar_sura/user.dart';
-import 'package:sajda/services/iser_service/isar_service.dart';
 
 part 'disable_sura_event.dart';
 part 'disable_sura_state.dart';

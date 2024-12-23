@@ -1,15 +1,15 @@
+import 'package:Sajda/app/constants/globals.dart';
+import 'package:Sajda/bloc_state_manegment/namoz_vaqtlari/namoz_vaqtlari_bloc.dart';
+import 'package:Sajda/bloc_state_manegment/theme_bloc/theme_mode_bloc.dart';
+import 'package:Sajda/screens/pages/about.dart';
+import 'package:Sajda/screens/pages/murojat.dart';
+import 'package:Sajda/screens/tabs/duolar.dart';
+import 'package:Sajda/screens/tabs/hadislar.dart';
+import 'package:Sajda/screens/tabs/suralar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
-import 'package:sajda/bloc_state_manegment/namoz_vaqtlari/namoz_vaqtlari_bloc.dart';
-import 'package:sajda/bloc_state_manegment/theme_bloc/theme_mode_bloc.dart';
-import 'package:sajda/screens/pages/about.dart';
-import 'package:sajda/screens/pages/murojat.dart';
-import 'package:sajda/screens/tabs/duolar.dart';
-import 'package:sajda/screens/tabs/hadislar.dart';
-import 'package:sajda/screens/tabs/suralar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

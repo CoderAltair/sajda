@@ -1,9 +1,9 @@
+import 'package:Sajda/app/constants/globals.dart';
+import 'package:Sajda/bloc_state_manegment/savedSuraBloc/get_sura_name_with_isar_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
-import 'package:sajda/bloc_state_manegment/savedSuraBloc/get_sura_name_with_isar_bloc.dart';
 
 class SavedSura extends StatefulWidget {
   const SavedSura({super.key});

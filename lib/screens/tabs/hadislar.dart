@@ -1,7 +1,7 @@
+import 'package:Sajda/app/constants/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
 
 class HadislarScreen extends StatelessWidget {
   const HadislarScreen({super.key});
@@ -32,8 +32,6 @@ class HadislarScreen extends StatelessWidget {
               ),
             ],
           ),
-          
-       
           rasm('1', context),
           Padding(
             padding: const EdgeInsets.all(10.0),

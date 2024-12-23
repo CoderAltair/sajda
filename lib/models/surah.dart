@@ -1,15 +1,12 @@
-
 import 'dart:convert';
 
-import 'package:sajda/models/ayat.dart';
-
+import 'package:Sajda/models/ayat.dart';
 
 List<Surah> surahFromJson(String str) =>
     List<Surah>.from(json.decode(str).map((x) => Surah.fromJson(x)));
 
 List<Ayat> surahAyaFromJson(String str) =>
     List<Ayat>.from(json.decode(str).map((x) {
-
       return Ayat.fromJson(x);
     }));
 

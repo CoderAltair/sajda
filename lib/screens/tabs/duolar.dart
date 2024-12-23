@@ -1,6 +1,6 @@
+import 'package:Sajda/app/constants/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
 
 class DuolarScreen extends StatefulWidget {
   const DuolarScreen({super.key});

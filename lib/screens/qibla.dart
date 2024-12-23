@@ -17,27 +17,62 @@ class _QiblahScreenState extends State<QiblahScreen>
   Animation<double>? animation;
   AnimationController? _animationController;
   double begin = 0.0;
-  Future getPermission() async {
-    if (await Permission.location.serviceStatus.isEnabled) {
-      var status = await Permission.location.status;
-      if (status.isGranted) {
-        hasPermission = true;
-      } else {
-        Permission.location.request().then((value) {
+
+  Future<void> getPermission() async {
+    try {
+      if (await Permission.location.serviceStatus.isEnabled) {
+        var status = await Permission.location.status;
+        if (status.isGranted) {
           setState(() {
-            hasPermission = (value == PermissionStatus.granted);
+            hasPermission = true;
           });
-        });
+        } else {
+          var result = await Permission.location.request();
+          setState(() {
+            hasPermission = (result == PermissionStatus.granted);
+          });
+        }
+      } else {
+        // Location xizmati o'chirilgan
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text('Location xizmati o\'chirilgan'),
+            content: const Text(
+                'Iltimos, qurilmangizning Location xizmatini yoqing'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('OK'),
+              ),
+            ],
+          ),
+        );
       }
+    } catch (e) {
+      print('Permission error: $e');
+      // Xatolik haqida foydalanuvchiga xabar berish
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Xatolik yuz berdi: $e')),
+      );
     }
   }
 
   @override
   void initState() {
-    _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 500));
-    animation = Tween(begin: 0.0, end: 0.0).animate(_animationController!);
     super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+    animation = Tween(begin: 0.0, end: 0.0).animate(_animationController!);
+    getPermission(); // Permission so'rash
+  }
+
+  @override
+  void dispose() {
+    _animationController?.dispose();
+    super.dispose();
   }
 
   @override
@@ -50,13 +85,25 @@ class _QiblahScreenState extends State<QiblahScreen>
           if (hasPermission) {
             return StreamBuilder(
               stream: FlutterQiblah.qiblahStream,
-              builder: (context, snapshot) {
+              builder: (context, AsyncSnapshot<QiblahDirection> snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Container(
                       alignment: Alignment.center,
                       child: const CircularProgressIndicator(
                         color: Colors.white,
                       ));
+                }
+
+                if (snapshot.hasError) {
+                  return Center(
+                    child: Text('Xatolik yuz berdi: ${snapshot.error}'),
+                  );
+                }
+
+                if (!snapshot.hasData) {
+                  return const Center(
+                    child: Text(' Kechirasiz qandaydir muammo bor'),
+                  );
                 }
 
                 final qiblahDirection = snapshot.data;

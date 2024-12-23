@@ -1,15 +1,13 @@
+import 'package:Sajda/app/constants/globals.dart';
+import 'package:Sajda/bloc_state_manegment/disableSura/disable_sura_bloc.dart';
+import 'package:Sajda/models/ayat.dart';
+import 'package:Sajda/models/isar_sura/user.dart';
+import 'package:Sajda/models/surah.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sajda/app/constants/globals.dart';
-import 'package:sajda/bloc_state_manegment/disableSura/disable_sura_bloc.dart';
-import 'package:sajda/models/ayat.dart';
-import 'package:sajda/models/isar_sura/user.dart';
-import 'package:sajda/models/surah.dart';
-
-
 
 class DetailScreen extends StatefulWidget {
   final int noSurat;
@@ -216,12 +214,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
             Text(
               ayat.idn != "" ? ayat.idn : ayat.tr,
-              style: GoogleFonts.montserrat(
-                
-                
-
-                
-                  fontSize: 16),
+              style: GoogleFonts.montserrat(fontSize: 16),
             )
           ],
         ),
