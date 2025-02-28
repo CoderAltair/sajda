@@ -51,7 +51,7 @@ class _QiblahScreenState extends State<QiblahScreen>
       }
     } catch (e) {
       print('Permission error: $e');
-      // Xatolik haqida foydalanuvchiga xabar berish
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Xatolik yuz berdi: $e')),
       );
@@ -66,7 +66,7 @@ class _QiblahScreenState extends State<QiblahScreen>
       duration: const Duration(milliseconds: 500),
     );
     animation = Tween(begin: 0.0, end: 0.0).animate(_animationController!);
-    getPermission(); // Permission so'rash
+    getPermission();
   }
 
   @override
