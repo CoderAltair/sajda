@@ -332,12 +332,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       IconButton(
-                                        onPressed: () {
-                                          BlocProvider.of<NamozVaqtlariBloc>(
-                                                  context)
-                                              .add(GetNamozVaqtiEvent(
-                                                  'Toshkent'));
-                                        },
+                                        onPressed: () {},
                                         icon: Image.asset(
                                           'assets/images/reload.png',
                                           scale: 22,
