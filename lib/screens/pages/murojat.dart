@@ -40,7 +40,7 @@ class CommentsPage extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Ushbu ilova hozirda test rejimida faoliyat olib bormoqda. Xato va kamchiliklar uchun oldindan uzur so`raymiz. Ilovada kamchilik yoki ilova yuzasidan savol va takliflar bo`lsa quyidagi email manzilga izoh qoldirishingiz mumkin.',
+              'Ushbu ilova hozirda test rejimida faoliyat olib bormoqda. Xato va kamchiliklar uchun oldindan uzur so`raymiz. Ilovada kamchilik yoki ilova yuzasidan savol va takliflar bo`lsa quyidagi email yoki telegram manzilga izoh qoldirishingiz mumkin.',
               style: GoogleFonts.poppins(
                   color: Theme.of(context).brightness == Brightness.light
                       ? Colors.black
@@ -56,6 +56,16 @@ class CommentsPage extends StatelessWidget {
               children: [
                 Text(
                   'Email: kamronqodirov441@gmail.com',
+                  textAlign: TextAlign.end,
+                  style: GoogleFonts.poppins(
+                      color: Theme.of(context).brightness == Brightness.light
+                          ? Colors.black
+                          : Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500),
+                ),
+                    Text(
+                  'T.me:@Ayubxon2008',
                   textAlign: TextAlign.end,
                   style: GoogleFonts.poppins(
                       color: Theme.of(context).brightness == Brightness.light

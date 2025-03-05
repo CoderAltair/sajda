@@ -322,13 +322,20 @@ class _TasbehScreenState extends State<TasbehScreen> {
       padding: const EdgeInsets.symmetric(vertical: 3),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(25)
+          ),
           backgroundColor: Theme.of(context).brightness == Brightness.light
               ? Colors.white
               : const Color(0xFF040C23),
+        
+          
         ),
         onPressed: onPressed,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
+          padding: const EdgeInsets.symmetric(
+            vertical: 8,
+          ),
           child: Text.rich(
             TextSpan(
               children: [

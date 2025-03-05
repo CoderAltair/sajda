@@ -20,7 +20,7 @@ class AboutPage extends StatelessWidget {
                 Icons.arrow_back_ios,
                 color: Theme.of(context).brightness == Brightness.light
                     ? Colors.black.withOpacity(0.8)
-                    : text,
+                    : Colors.grey,
               ),
             ),
             Text(

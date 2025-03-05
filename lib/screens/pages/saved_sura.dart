@@ -106,7 +106,11 @@ class _SavedSuraState extends State<SavedSura> {
                                     ),
                                     Center(
                                         child: Text(
-                                      suralarTxt[state.user![index].suraIndex!],
+                                      state.user![index].suraIndex! <
+                                              suralarTxt.length
+                                          ? suralarTxt[
+                                              state.user![index].suraIndex!]
+                                          : "Noma'lum sura",
                                       style: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w500,
                                           fontSize: 17,
@@ -219,7 +223,6 @@ class _SavedSuraState extends State<SavedSura> {
   }
 
   List<String> suralarTxt = [
-    "",
     "Fotiha surasi",
     "Baqara surasi",
     "Oli Imron surasi",
@@ -240,7 +243,7 @@ class _SavedSuraState extends State<SavedSura> {
     "Kahf surasi",
     "Maryam surasi",
     "Toha surasi",
-    "Anbiyo surasi'",
+    "Anbiyo surasi",
     "Haj surasi",
     "Mu'minun surasi",
     "Nur surasi",
@@ -275,7 +278,7 @@ class _SavedSuraState extends State<SavedSura> {
     "Najm surasi",
     "Qamar surasi",
     "Ar Rahmon surasi",
-    "Voqea` surasi",
+    "Voqea surasi",
     "Hadid surasi",
     "Mujodala surasi",
     "Hashr surasi",
@@ -288,7 +291,7 @@ class _SavedSuraState extends State<SavedSura> {
     "Tahrim surasi",
     "Mulk surasi",
     "Qalam surasi",
-    "Al-Haaqqah surasi"
+    "Haqqah surasi"
         "Maorij surasi",
     "Nuh surasi",
     "Jin surasi",
@@ -302,8 +305,8 @@ class _SavedSuraState extends State<SavedSura> {
     "Abasa surasi",
     "Takvir surasi",
     "Infitor surasi",
-    "Mutoffifin surasi"
-        "Inshiqoq surasi",
+    "Mutoffifin surasi",
+    "Inshiqoq surasi",
     "Buruj surasi",
     "Toriq surasi",
     "A'lo surasi",

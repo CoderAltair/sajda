@@ -33,12 +33,12 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) =>
               NamozVaqtlariBloc()..add(GetNamozVaqtiEvent("Toshkent")),
-        ),
+        ),  
       ],
       child: BlocBuilder<ThemeModeBloc, ThemeModeState>(
         builder: (context, state) {
           return MaterialApp(
-            title: 'Flutter Demo',
+            title: 'Sajda Mobile App',
             themeMode: state is SetLightThemeModeState
                 ? ThemeMode.light
                 : ThemeMode.dark,

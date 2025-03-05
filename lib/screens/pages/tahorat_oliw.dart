@@ -15,79 +15,81 @@ class _AblutionState extends State<Ablution> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          PageView(
-            controller: pageController,
-            onPageChanged: (value) {
-              currentPage = value;
-            },
-            children: [
-              ablutionSteps(0, "Niyat",
-                  "Tahorat olish uchun, iloji boʼlsa, qiblaga yuzlaniladi.\n  «A'uzu billahi minash -shaytonir rojiym.  Bismillahir rohmanir rohiym» deb, niyat qilinadi."),
-              ablutionSteps(1, "Qo`llarni yuvish",
-                  "Qoʼllar bandigacha uch marta yuviladi. Barmogʼida uzugi bor kishi uni qimirlatib, ostiga suv yetkazadi. Barmoqlarni bir-birining orasiga kirgiziladi."),
-              ablutionSteps(2, "Og`iz chayish",
-                  "O'ng qo'lda suv olinib, og'iz uch marta g'arg'ara qilib chayiladi va misvok qilinadi."),
-              ablutionSteps(3, "Burunni chayish",
-                  "Burunga o'ng qo'l bilan uch marta suv tortilib, chap qo'l bilan qoqib tozalanadi."),
-              ablutionSteps(4, "Yuzni yuvish",
-                  "Yuz yuviladi – uch marta. Yuzning chegarasi uzunasiga soch chiqqan joydan jagʼning ostigacha, kengligi esa ikki quloq yumshogʼining orasigacha boʼlgan oʼrindir."),
-              ablutionSteps(5, "Qo`llarni tirsakkacha yuvish",
-                  "Avval o'ng qo'l tirsaklar bilan qo'shib ishqalab yuviladi.",
-                  index2: 6),
-              ablutionSteps(7, "Qo`llarni tirsakkacha yuvish",
-                  "So'ngra chap qo'l tirsaklar bilan qo'shib ishqalab yuviladi.",
-                  index2: 8),
-              ablutionSteps(
-                10,
-                "Boshga mas'h tortish",
-                "Hovuchga suv olib toʼkib tashlab, qoʼli bilan boshning hamma qismiga bir marta mash tortiladi.",
-              ),
-              ablutionSteps(12, "Quloqqa mas'h tortish",
-                  "Koʼrsatkich barmoq bilan quloq ichiga mash tortib, bosh barmoq bilan esa quloq tashqarisiga mash tortiladi.",
-                  index2: 13),
-              ablutionSteps(11, "Bo`yinga mas'h tortish",
-                  "Ikkala kaftning orqasi bilan bo`yinga mas'h tortiladi",
-                  index2: 13),
-              ablutionSteps(14, "Oyoqlarni yuvish",
-                  "Chap qoʼl bilan oʼng oyoqni oshiq (toʼpiq) bilan qoʼshib va barmoqlar orasini (ishqalab) uch marta yuviladi."),
-              ablutionSteps(15, "Oyoqlarni yuvish",
-                  "Chap oyoq ham huddi shu tarzda uch marta chap qoʼl bilan oyoqni oshiq (toʼpiq) bilan qoʼshib va barmoqlar orasini (ishqalab) uch marta yuviladi."),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+      body: SafeArea(
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            PageView(
+              controller: pageController,
+              onPageChanged: (value) {
+                currentPage = value;
+              },
               children: [
-                IconButton(
-                  onPressed: () {
-                    pageController.previousPage(
-                        duration: const Duration(milliseconds: 200),
-                        curve: Curves.linear);
-                  },
-                  icon: const Icon(
-                    Icons.keyboard_arrow_left_outlined,
-                    size: 35,
-                  ),
+                ablutionSteps(0, "Niyat",
+                    "Tahorat olish uchun, iloji boʼlsa, qiblaga yuzlaniladi.\n  «A'uzu billahi minash -shaytonir rojiym.  Bismillahir rohmanir rohiym» deb, niyat qilinadi."),
+                ablutionSteps(1, "Qo`llarni yuvish",
+                    "Qoʼllar bandigacha uch marta yuviladi. Barmogʼida uzugi bor kishi uni qimirlatib, ostiga suv yetkazadi. Barmoqlarni bir-birining orasiga kirgiziladi."),
+                ablutionSteps(2, "Og`iz chayish",
+                    "O'ng qo'lda suv olinib, og'iz uch marta g'arg'ara qilib chayiladi va misvok qilinadi."),
+                ablutionSteps(3, "Burunni chayish",
+                    "Burunga o'ng qo'l bilan uch marta suv tortilib, chap qo'l bilan qoqib tozalanadi."),
+                ablutionSteps(4, "Yuzni yuvish",
+                    "Yuz yuviladi – uch marta. Yuzning chegarasi uzunasiga soch chiqqan joydan jagʼning ostigacha, kengligi esa ikki quloq yumshogʼining orasigacha boʼlgan oʼrindir."),
+                ablutionSteps(5, "Qo`llarni tirsakkacha yuvish",
+                    "Avval o'ng qo'l tirsaklar bilan qo'shib ishqalab yuviladi.",
+                    index2: 6),
+                ablutionSteps(7, "Qo`llarni tirsakkacha yuvish",
+                    "So'ngra chap qo'l tirsaklar bilan qo'shib ishqalab yuviladi.",
+                    index2: 8),
+                ablutionSteps(
+                  10,
+                  "Boshga mas'h tortish",
+                  "Hovuchga suv olib toʼkib tashlab, qoʼli bilan boshning hamma qismiga bir marta mash tortiladi.",
                 ),
-                IconButton(
-                  onPressed: () {
-                    pageController.nextPage(
-                        duration: const Duration(milliseconds: 200),
-                        curve: Curves.linear);
-                  },
-                  icon: const Icon(
-                    Icons.keyboard_arrow_right_outlined,
-                    size: 35,
-                  ),
-                ),
+                ablutionSteps(12, "Quloqqa mas'h tortish",
+                    "Koʼrsatkich barmoq bilan quloq ichiga mash tortib, bosh barmoq bilan esa quloq tashqarisiga mash tortiladi.",
+                    index2: 13),
+                ablutionSteps(11, "Bo`yinga mas'h tortish",
+                    "Ikkala kaftning orqasi bilan bo`yinga mas'h tortiladi",
+                    index2: 13),
+                ablutionSteps(14, "Oyoqlarni yuvish",
+                    "Chap qoʼl bilan oʼng oyoqni oshiq (toʼpiq) bilan qoʼshib va barmoqlar orasini (ishqalab) uch marta yuviladi."),
+                ablutionSteps(15, "Oyoqlarni yuvish",
+                    "Chap oyoq ham huddi shu tarzda uch marta chap qoʼl bilan oyoqni oshiq (toʼpiq) bilan qoʼshib va barmoqlar orasini (ishqalab) uch marta yuviladi."),
               ],
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      pageController.previousPage(
+                          duration: const Duration(milliseconds: 200),
+                          curve: Curves.linear);
+                    },
+                    icon: const Icon(
+                      Icons.keyboard_arrow_left_outlined,
+                      size: 35,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      pageController.nextPage(
+                          duration: const Duration(milliseconds: 200),
+                          curve: Curves.linear);
+                    },
+                    icon: const Icon(
+                      Icons.keyboard_arrow_right_outlined,
+                      size: 35,
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
