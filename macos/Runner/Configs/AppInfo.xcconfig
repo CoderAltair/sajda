@@ -8,7 +8,7 @@
 PRODUCT_NAME = sajda
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = uz.all_courses.all_courses_uz
+PRODUCT_BUNDLE_IDENTIFIER = uz.sajdaapp_uz
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 uz.all_courses. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 uz.sajdaapp. All rights reserved.

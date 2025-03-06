@@ -1,4 +1,4 @@
-package uz.all_courses.all_courses_uz
+package uz.sajdaapp
 
 import io.flutter.embedding.android.FlutterActivity
 
