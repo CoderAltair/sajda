@@ -1,5 +1,6 @@
 import 'package:Sajda/app/constants/globals.dart';
 import 'package:Sajda/bloc_state_manegment/disableSura/disable_sura_bloc.dart';
+import 'package:Sajda/bloc_state_manegment/theme_bloc/theme_mode_bloc.dart';
 import 'package:Sajda/models/ayat.dart';
 import 'package:Sajda/models/isar_sura/user.dart';
 import 'package:Sajda/models/surah.dart';
@@ -61,7 +62,9 @@ class _DetailScreenState extends State<DetailScreen> {
               }
               List<Ayat> ayat = snapshot.data!;
               return Scaffold(
-                // backgroundColor: background,
+                backgroundColor: Theme.of(context).brightness == Brightness.dark
+                    ? Colors.black.withOpacity(0.7)
+                    : Colors.white,
                 appBar: _appBar(
                   context: context,
                 ),
@@ -363,15 +366,39 @@ class _DetailScreenState extends State<DetailScreen> {
                     : Colors.white),
           ),
           const Spacer(),
-          IconButton(
-            onPressed: () {},
-            icon: Image.asset(
-              'assets/images/moon.png',
-              color: Theme.of(context).brightness == Brightness.light
-                  ? Colors.black.withOpacity(0.8)
-                  : text,
-              height: 25,
-            ),
+          BlocConsumer<ThemeModeBloc, ThemeModeState>(
+            listener: (context, state) {},
+            builder: (context, state) {
+              return state is SetDarkThemeModeState
+                  ? IconButton(
+                      onPressed: () {
+                        BlocProvider.of<ThemeModeBloc>(context).add(
+                          SetLightThemeEvent(),
+                        );
+                      },
+                      icon: Image.asset(
+                        'assets/images/moon.png',
+                        color: Theme.of(context).brightness == Brightness.light
+                            ? Colors.black.withOpacity(0.8)
+                            : text,
+                        height: 25,
+                      ),
+                    )
+                  : IconButton(
+                      onPressed: () {
+                        BlocProvider.of<ThemeModeBloc>(context).add(
+                          SetDarkThemeEvent(),
+                        );
+                      },
+                      icon: Image.asset(
+                        "assets/images/sun.png",
+                        color: Theme.of(context).brightness == Brightness.light
+                            ? Colors.black.withOpacity(0.8)
+                            : text,
+                        height: 25,
+                      ),
+                    );
+            },
           ),
         ]),
       );

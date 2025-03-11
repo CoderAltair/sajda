@@ -6,6 +6,7 @@ import 'package:Sajda/screens/pages/murojat.dart';
 import 'package:Sajda/screens/tabs/duolar.dart';
 import 'package:Sajda/screens/tabs/hadislar.dart';
 import 'package:Sajda/screens/tabs/suralar.dart';
+import 'package:Sajda/screens/widgets/ramazon_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -342,6 +343,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ],
                               );
+                      },
+                    ),
+                    SizedBox(height: 20),
+                    BlocBuilder<NamozVaqtlariBloc, NamozVaqtlariState>(
+                      builder: (context, state) {
+                        if (state is SuccesNamozVaqtlariState) {
+                          return RamazonTimeCard(
+                              txt: '',
+                              imgSaxarlik: 'bomdod',
+                              imgIftorlik: 'shom',
+                              saxarlik:
+                                  state.time.times?.tongSaharlik.toString() ??
+                                      "",
+                              iftorlik:
+                                  state.time.times?.shomIftor.toString() ?? "");
+                        } else {
+                          return const Center(
+                            child: Text(''),
+                          );
+                        }
                       },
                     ),
                   ],
